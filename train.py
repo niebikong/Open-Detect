@@ -26,14 +26,14 @@ if __name__ == '__main__':
     combined_USTC_mal 0, 1
     """
     parser.add_argument('--dset', default='mal', help='dataset')
-    parser.add_argument('--lr', type=float, default=0.001, help='initial_learning_rate')  # 0.001
-    parser.add_argument('--batch_size', type=int, default=128)  # 32
-    parser.add_argument('--epoch', type=int, default=100)  # 100
+    parser.add_argument('--lr', type=float, default=0.001, help='initial_learning_rate')  
+    parser.add_argument('--batch_size', type=int, default=128)  
+    parser.add_argument('--epoch', type=int, default=100)  
     parser.add_argument('--num_classes', type=int, default=6, help='number of classes')
-    parser.add_argument('--h', type=int, default=128, help='dimension of the hidden layer')  # 128
-    parser.add_argument('--c', type=int, default=1, help='image channel')  #  default=3
-    parser.add_argument('--temp_inter', type=float, default=1, help='temperature factor')  # 0.1
-    parser.add_argument('--temp_intra', type=float, default=1, help='temperature factor')  # 1
+    parser.add_argument('--h', type=int, default=128, help='dimension of the hidden layer')  
+    parser.add_argument('--c', type=int, default=1, help='image channel')  
+    parser.add_argument('--temp_inter', type=float, default=1, help='temperature factor') 
+    parser.add_argument('--temp_intra', type=float, default=1, help='temperature factor') 
     parser.add_argument('--gpu', type=int, default=0, help='gpu device')
     parser.add_argument('--arch', default='resnet18', help='net arch')
 
@@ -43,7 +43,7 @@ if __name__ == '__main__':
 
 
     args, _ = parser.parse_known_args()
-    setup_seed(2022)  # 2022, 2024
+    setup_seed(2022)  
     os.environ["CUDA_VISIBLE_DEVICES"] = '%s' % args.gpu
     if not os.path.exists('./save_model/'):
         os.makedirs('./save_model/')
