@@ -146,4 +146,4 @@ if __name__ == '__main__':
 
     acc, auroc = test_openset(model, inner_loader, open_loader, args)
 
-
+    # 111    
