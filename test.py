@@ -145,5 +145,3 @@ if __name__ == '__main__':
     model = torch.load(model_dir)
 
     acc, auroc = test_openset(model, inner_loader, open_loader, args)
-
-    # 111    
