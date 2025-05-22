@@ -1,6 +1,6 @@
 # Detection of Unknown Attacks: A Gaussian Prototype-Aided Variational Autoencoder Framework
 
-![image-20250522103530795](README.assets\image-20250522103530795.png)
+![image-20250522103530795](README.assets/image-20250522103530795.png)
 
 **Overview of the Open-Detect framework for unknown network traffic detection.**
 
@@ -22,7 +22,7 @@ You can download all the dataset from pan.baidu.com
 
 **8 scenarios:**
 
-![image-20250522105230233](README.assets\image-20250522105230233.png)
+![image-20250522105230233](README.assets/image-20250522105230233.png)
 
 
 
