@@ -42,12 +42,12 @@ class OPENWORLDmal(torchvision.datasets.CIFAR10):
         super(OPENWORLDmal, self).__init__(root, train, transform, target_transform, download=False)
 
         if train:
-            loaded_data = np.load(r'/home/ju/Desktop/NetMamba/MGPL/data/mamba数据/mal_32_1c_train.npz')
+            loaded_data = np.load(r'data/dataset/mal_32_1c_train.npz')
             self.data = loaded_data['data']
             self.targets = loaded_data['target']
             self.data = np.vstack(self.data).reshape(-1, 32, 32)
         else:
-            loaded_data = np.load(r'/home/ju/Desktop/NetMamba/MGPL/data/mamba数据/mal_32_1c_test.npz')
+            loaded_data = np.load(r'data/dataset/mal_32_1c_test.npz')
             self.data = loaded_data['data']
             self.targets = loaded_data['target']
             self.data = np.vstack(self.data).reshape(-1, 32, 32)
@@ -59,12 +59,12 @@ class combined_USTC_mal(torchvision.datasets.CIFAR10):
                  download=False, unlabeled_idxs=None):
         super(combined_USTC_mal, self).__init__(root, train, transform, target_transform, download=False)
         if train:
-            loaded_data = np.load(r'/home/ju/Desktop/NetMamba/MGPL/data/mamba数据/combined_train_data.npz')
+            loaded_data = np.load(r'data/dataset/combined_train_data.npz')
             self.data = loaded_data['data']
             self.targets = loaded_data['target']
             self.data = np.vstack(self.data).reshape(-1, 32, 32)
         else:
-            loaded_data = np.load(r'/home/ju/Desktop/NetMamba/MGPL/data/mamba数据/combined_test_data.npz')
+            loaded_data = np.load(r'data/dataset/combined_test_data.npz')
             self.data = loaded_data['data']
             self.targets = loaded_data['target']
             self.data = np.vstack(self.data).reshape(-1, 32, 32)
@@ -76,12 +76,12 @@ class USTC(torchvision.datasets.CIFAR10):
         super(USTC, self).__init__(root, train, transform, target_transform, download=False)
 
         if train:
-            loaded_data = np.load(r'/home/ju/Desktop/NetMamba/MGPL/data/mamba数据/USTC_1c_train.npz')
+            loaded_data = np.load(r'data/dataset/USTC_1c_train.npz')
             self.data = loaded_data['data']
             self.targets = loaded_data['target']
             self.data = np.vstack(self.data).reshape(-1, 32, 32)
         else:
-            loaded_data = np.load(r'/home/ju/Desktop/NetMamba/MGPL/data/mamba数据/USTC_1c_test.npz')
+            loaded_data = np.load(r'data/dataset/USTC_1c_test.npz')
             self.data = loaded_data['data']
             self.targets = loaded_data['target']
             self.data = np.vstack(self.data).reshape(-1, 32, 32)

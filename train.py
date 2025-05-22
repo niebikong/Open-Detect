@@ -21,11 +21,11 @@ datasets = [
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     """
-    USTC 10, 3, 2
-    mal  10, 1, 6
+    USTC 0, 1, 2
+    mal  0, 1, 2
     combined_USTC_mal 0, 1
     """
-    parser.add_argument('--dset', default='USTC', help='dataset')
+    parser.add_argument('--dset', default='mal', help='dataset')
     parser.add_argument('--lr', type=float, default=0.001, help='initial_learning_rate')  # 0.001
     parser.add_argument('--batch_size', type=int, default=128)  # 32
     parser.add_argument('--epoch', type=int, default=100)  # 100

@@ -13,7 +13,7 @@ from sklearn.metrics import precision_recall_fscore_support, confusion_matrix, c
 import matplotlib.pyplot as plt
 from model import OpenDetectNet
 
-def get_output(model, data_loader, save_path):
+def get_output(model, data_loader):
     z = []
     dists = []
     labels = []
@@ -41,7 +41,6 @@ def get_output(model, data_loader, save_path):
     kld_min = np.min(kld_class_min, 1)
     kld_pred = np.argmin(kld_class_min, 1)
 
-    np.savez(save_path, z=z, labels=labels, dist_min=dist_min, kld_min=kld_min, dist_pred=dist_pred, kld_pred=kld_pred)
     return z, labels, dist_min, kld_min, dist_pred, kld_pred
 
 def auroc_score(inner_score, open_score, args):  
@@ -92,10 +91,8 @@ def inner_acc(pred_inner, labels_inner):
 def test_openset(model, inner_loader, open_loader, args):
     model.eval()
     model = model.cuda()
-    inner_save_path = r'/home/ju/Desktop/NetMamba/MGPL/visual/z_data/inner_{}_{}.npz'.format(args.dset, args.split)
-    z_inner, inner_label, _, inner_score, _, inner_pred = get_output(model, inner_loader, inner_save_path)
-    open_save_path = r'/home/ju/Desktop/NetMamba/MGPL/visual/z_data/open_{}_{}.npz'.format(args.dset, args.split)
-    z_open, open_label, _, open_score, _, open_pred = get_output(model, open_loader, open_save_path)
+    z_inner, inner_label, _, inner_score, _, inner_pred = get_output(model, inner_loader)
+    z_open, open_label, _, open_score, _, open_pred = get_output(model, open_loader)
     acc = inner_acc(inner_pred, inner_label)
     auroc = auroc_score(inner_score, open_score, args)
     return acc, auroc
@@ -103,8 +100,8 @@ def test_openset(model, inner_loader, open_loader, args):
 
 if __name__ == '__main__':
     """
-    USTC 10, 3, 2
-    mal  10, 1, 6
+    USTC 0, 1, 2
+    mal  0, 1, 2
     combined_USTC_mal 0, 1
     """
     parser = argparse.ArgumentParser()

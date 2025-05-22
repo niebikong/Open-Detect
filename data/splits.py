@@ -1,63 +1,30 @@
-mal = {
-    'known_set': 'mal',
-    'unknown_set': 'mal',
-    'splits': [
-        {'known_classes': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19], 'unknown_classes': [20, 21, 22, 23]},
-        {'known_classes': [3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20, 21, 22, 23], 'unknown_classes': [0, 1, 2]},
-        {'known_classes': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20], 'unknown_classes': [21, 22, 23]},
-        {'known_classes': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22], 'unknown_classes': [23]},
-        {'known_classes': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,23], 'unknown_classes': [22]},
-        {'known_classes': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,22,23], 'unknown_classes': [21]},
-        {'known_classes': [5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20, 21, 22, 23], 'unknown_classes': [0, 1, 2, 3, 4]},
-        {'known_classes': [1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20, 21, 22, 23], 'unknown_classes': [0]},
-        {'known_classes': [0, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20, 21, 22, 23], 'unknown_classes': [1]},
-        {'known_classes': [0, 1, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20, 21, 22, 23], 'unknown_classes': [2]},
-        {'known_classes': [0, 1, 2, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20, 21, 22, 23], 'unknown_classes': [3]},
-        {'known_classes': [0], 'unknown_classes': [1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]},
-        {'known_classes': [0, 1], 'unknown_classes': [2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]},
-    ]
-}
-
-
+# Scenario A-1, A-2, A-3
 USTC = {
     'known_set': 'USTC',
     'unknown_set': 'USTC',
     'splits': [
-        {'known_classes': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16], 'unknown_classes': [17, 18, 19]},
-        {'known_classes': [0,1,3,4,7,8,9,11,14,17], 'unknown_classes': [2,5,6,10,12,13,15,16,18,19]},
-        {'known_classes': [0,1,3,4,7,8,9,11,14,17, 2,5,6,10,12], 'unknown_classes': [13,15,16,18,19]},
+        {'known_classes': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19], 'unknown_classes': [16]},
         {'known_classes': [0,1,3,4,7,8,9,11,14,17, 2,5,6,10,12,18,19], 'unknown_classes': [13,15,16]},
-        {'known_classes': [0,1,3,4,7,8,9,11,14,17,10,12,13,15,16,18,19], 'unknown_classes': [2,5,6]},
-        {'known_classes': [0,1,3,4,7,8,9,11,14,17,15,2,5,6,16,18,19], 'unknown_classes': [10,12,13]},
-        {'known_classes': [0,1,3,4,7,8,9,11,14,17,2,5,6,10,12,13,19], 'unknown_classes': [15,16,18]},
-        {'known_classes': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18], 'unknown_classes': [19]},
-        {'known_classes': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19], 'unknown_classes': [18]},
-        {'known_classes': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19], 'unknown_classes': [17]},
-        {'known_classes': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19], 'unknown_classes': [16]},
-
-        {'known_classes': [0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19], 'unknown_classes': [2]},
-        {'known_classes': [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19], 'unknown_classes': [5]},
-        {'known_classes': [0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19], 'unknown_classes': [6]},
-        {'known_classes': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19], 'unknown_classes': [10]},
-        {'known_classes': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19], 'unknown_classes': [12]},
-        {'known_classes': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19], 'unknown_classes': [13]},
-        {'known_classes': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19], 'unknown_classes': [15]},
-        {'known_classes': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19], 'unknown_classes': [16]},
-        {'known_classes': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19], 'unknown_classes': [18]},
-        {'known_classes': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18], 'unknown_classes': [19]},
-
-        {'known_classes': [0, 1], 'unknown_classes': [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]},
+        {'known_classes': [0,1,3,4,7,8,9,11,14,17, 2,5,6,10,12], 'unknown_classes': [13,15,16,18,19]},
     ]
 }
-# [0,1,3,4,7,8,9,11,14,17]是良性
-# [2,5,6,10,12,13,15,16,18,19]是恶意
 # {'Gmail': 0, 'FTP': 1, 'Nsis-ay': 2, 'Facetime': 3, 'Weibo': 4, 'Cridex': 5, 'Zeus': 6, 'SMB': 7, 'BitTorrent': 8, 'WorldOfWarcraft': 9, 'Shifu': 10, 
 # 'Outlook': 11, 'Virut': 12, 'Geodo': 13, 'MySQL': 14, 'Htbot': 15, 'Tinba': 16, 'Skype': 17, 'Miuref': 18, 'Neris': 19}
 
-
+# Scenario B-1, B-2, B-3
+mal = {
+    'known_set': 'mal',
+    'unknown_set': 'mal',
+    'splits': [
+        {'known_classes': [0, 1, 2, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20, 21, 22, 23], 'unknown_classes': [3]},
+        {'known_classes': [3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20, 21, 22, 23], 'unknown_classes': [0, 1, 2]},
+        {'known_classes': [5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20, 21, 22, 23], 'unknown_classes': [0, 1, 2, 3, 4]},
+    ]
+}
 
 
 # mal的标签是0-23之间，USTC的标签在24-43之间，新的数据标签在0-43，共44类数据
+# Scenario C-1, C-2
 combined_USTC_mal = {
     'known_set': 'combined_USTC_mal',
     'unknown_set': 'combined_USTC_mal',
