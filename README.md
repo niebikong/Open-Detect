@@ -8,7 +8,7 @@
 
 ## 1.Dataset
 
-The dataset in `data/data set`
+The dataset in `data/dataset`
 
 You can download all the dataset from pan.baidu.com
 
