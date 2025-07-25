@@ -37,7 +37,7 @@ if __name__ == '__main__':
     parser.add_argument('--gpu', type=int, default=0, help='gpu device')
     parser.add_argument('--arch', default='resnet18', help='net arch')
 
-    parser.add_argument('--split', type=int, default=10, help='unknown splits')
+    parser.add_argument('--split', type=int, default=0, help='unknown splits')
     
     parser.add_argument('--lamda', type=float, default=0.005, help='balance param between gen & dis')
 

@@ -39,7 +39,7 @@ class OPENWORLDmal(torchvision.datasets.CIFAR10):
 
     def __init__(self, root, train=True, labeled_num=5, labeled_ratio=0.5, rand_number=0, transform=None, target_transform=None,
                  download=False, unlabeled_idxs=None):
-        super(OPENWORLDmal, self).__init__(root, train, transform, target_transform, download=False)
+        super(OPENWORLDmal, self).__init__(root, train, transform, target_transform, download=True)
 
         if train:
             loaded_data = np.load(r'data/dataset/mal_32_1c_train.npz')
