@@ -1,4 +1,7 @@
-# Open-Detect: Detection of Unknown Attacks using Gaussian Prototype-Aided Variational Autoencoder
+# Detection of Unknown Attacks Through Encrypted Traffic: A Gaussian Prototype-Aided Variational Autoencoder Framework
+IEEE TIFS 2025 ([https://ieeexplore.ieee.org/document/11173980](https://ieeexplore.ieee.org/document/11173696))
+
+---
 
 ### Abstract
 
@@ -139,6 +142,20 @@ For more technical details, see the code in `model.py`.
 
 The framework is evaluated across 8 scenarios, including multiple attack types.  
 Performance metrics, confusion matrices, and ROC curves can be generated using the test script.
+
+---
+
+## Citation
+
+```
+@article{meng2025detection,
+  title={Detection of Unknown Attacks Through Encrypted Traffic: A Gaussian Prototype-Aided Variational Autoencoder Framework},
+  author={Meng, Qianwei and Tao, Jing and Yuan, Qingjun and Li, Guangsong and Wang, Yongjuan and Gao, Bing and Lu, Siqi},
+  journal={IEEE Transactions on Information Forensics and Security},
+  year={2025},
+  publisher={IEEE}
+}
+```
 
 ---
 
